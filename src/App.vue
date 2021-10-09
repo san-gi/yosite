@@ -1,21 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+
+      
+        <transition name="scale-slide">
+        <router-view> </router-view>
+      </transition>
+      
+  </v-app>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
+  data: () => ({
+    //
+  }),
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -23,6 +26,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.scale-slide-enter-active,
+.scale-slide-leave-active {
+  position: absolute;
+  transition: all 3s ease;
+}
+
+.scale-slide-leave-from {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.scale-slide-leave-to {
+  transform: scale(2);
+  opacity: 0;
 }
 </style>
