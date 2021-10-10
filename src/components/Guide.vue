@@ -1,5 +1,5 @@
 <template>
-  <v-card class="overflow-hidden secondPage"  color="#fdfd96" height="100%">
+  <v-card class="overflow-hidden secondPage" color="#fdfd96" height="100%">
     <v-app-bar
       app
       fixed
@@ -50,37 +50,38 @@
         </v-tabs>
       </template>
     </v-app-bar>
-
-    <v-tabs-items v-model="tab" height="100%" >
-      <v-tab-item :key="1" :value="'tab-' + 1">
-        <v-card color="#fdfd96" flat height="100%" >
-          <v-card-text 
-            ><p class="elementPage"><Page1 /></p
-          ></v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item :key="2" :value="'tab-' + 2">
-        <v-card flat color="#fdfd96">
-          <v-card-text
-            ><p class="elementPage"><Page2 /></p
-          ></v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item :key="3" :value="'tab-' + 3">
-        <v-card flat color="#fdfd96">
-          <v-card-text 
-            ><p class="elementPage"><Page3 /></p
-          ></v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item :key="4" :value="'tab-' + 4">
-        <v-card flat color="#fdfd96">
-          <v-card-text
-            ><p class="elementPage"><Page4 /></p
-          ></v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
+    <v-container>
+      <v-tabs-items v-model="tab" height="100%">
+        <v-tab-item :key="1" :value="'tab-' + 1">
+          <v-card color="#fdfd96" flat height="100%">
+            <v-card-text
+              ><p class="elementPage"><Page1 /></p
+            ></v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item :key="2" :value="'tab-' + 2">
+          <v-card flat color="#fdfd96">
+            <v-card-text
+              ><p class="elementPage"><Page2 /></p
+            ></v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item :key="3" :value="'tab-' + 3">
+          <v-card flat color="#fdfd96">
+            <v-card-text
+              ><p class="elementPage"><Page3 /></p
+            ></v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item :key="4" :value="'tab-' + 4">
+          <v-card flat color="#fdfd96">
+            <v-card-text
+              ><p class="elementPage"><Page4 /></p
+            ></v-card-text>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
+    </v-container>
   </v-card>
 </template>
 <script>
@@ -104,7 +105,6 @@ export default {
 };
 </script>
 <style >
-
 .elementPage {
   padding-top: 250px;
 }
