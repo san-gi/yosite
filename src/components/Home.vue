@@ -9,7 +9,7 @@
         </v-row></div
     ></router-link>
     <p class="pa-10">
-      Maëva, décoratrice designer redécore votre intérieur passionément.
+      Maëva, décoratrice designer redécore votre intérieur passionnément
     </p>
   </div>
 </template>

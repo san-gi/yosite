@@ -13,13 +13,18 @@
         <v-expansion-panel-content>
           {{ prestas[i].txt }}
           <template>
-            <v-data-table
-              dense
-              :headers="headers"
-              :items="prestas[i].prix"
-              item-key="name"
-              class="elevation-1"
-            ></v-data-table>
+            <thead>
+              <tr>
+                <th class="text-left">Quantité</th>
+                <th class="text-left">Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in prestas[i].prix" :key="item.name">
+                <td>{{ item.quantité }}</td>
+                <td>{{ item.prix }}</td>
+              </tr>
+            </tbody>
           </template>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -43,7 +48,7 @@ export default {
       {
         nameQuantity: "planches",
         name: "Planche d'ambiance",
-        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        txt: "planche composée d'images de couleur(s), d'objets, de matériaux, de textile(s) et de luminaire(s) pour une meilleure vision de l'ambiance que vous souhaitez obtenir dans votre cocon",
         prix: [
           { quantité: "30 minutes", prix: "40€" },
           { quantité: "1 heure", prix: "70€" },
@@ -53,7 +58,7 @@ export default {
       {
         nameQuantity: "pièces",
         name: "Shopping list",
-        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        txt: "Je vous prépare votre liste d'achats pour les pièces de votre intérieur en fonction de vos besoins et de votre budget. Les références, prix, mesures, le poids et le nom de chacun des articles seront inscrits.",
         prix: [
           { quantité: "30 minutes", prix: "40€" },
           { quantité: "1 heure", prix: "70€" },
@@ -63,7 +68,7 @@ export default {
       {
         nameQuantity: "m²",
         name: "Planche d'aménagement",
-        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        txt: "plan de sol 2D",
         prix: [
           { quantité: "30 minutes", prix: "40€" },
           { quantité: "1 heure", prix: "70€" },
@@ -73,7 +78,17 @@ export default {
       {
         nameQuantity: "vue",
         name: "Croquis 3D",
-        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        txt: "vue en perspective des pièces de votre intérieur",
+        prix: [
+          { quantité: "30 minutes", prix: "40€" },
+          { quantité: "1 heure", prix: "70€" },
+          { quantité: "2 heures", prix: "120€" },
+        ],
+      },
+      {
+        nameQuantity: "vue",
+        name: "Modélisation 3D avec rendu réaliste",
+        txt: "Vu de votre intérieur en 3 dimensions",
         prix: [
           { quantité: "30 minutes", prix: "40€" },
           { quantité: "1 heure", prix: "70€" },
@@ -87,7 +102,7 @@ export default {
         value: "quantité",
         sortable: false,
       },
-      { text: "Prix", value: "prix",sortable: false, },
+      { text: "Prix", value: "prix", sortable: false },
     ],
   }),
 };
