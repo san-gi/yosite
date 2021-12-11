@@ -16,15 +16,6 @@
       </template>
       <v-toolbar-title>Ram comcept déco</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
       <template v-slot:extension>
         <v-tabs align-with-title v-model="tab" dark icons-and-text>
           <v-tabs-slider></v-tabs-slider>
