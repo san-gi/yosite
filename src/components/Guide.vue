@@ -1,23 +1,20 @@
 <template>
-  <v-card class="overflow-hidden secondPage" color="#fdfd96" height="100%">
+  <v-card class="overflow-hidden secondPage"  height="100%">
     <v-app-bar
       app
       fixed
-      color="yellow"
       dark
       shrink-on-scroll
       prominent
-      src="https://picsum.photos/1920/1080?random"
+      src="bg.jpg"
       fade-img-on-scroll
     >
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-app-bar-title>Ram compept deco</v-app-bar-title>
+      <v-toolbar-title>Ram comcept déco</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -36,11 +33,12 @@
             <v-icon>mdi-phone</v-icon>
           </v-tab>
           <v-tab href="#tab-2">
-            Prestation
+            Prestations
             <v-icon>mdi-heart</v-icon>
           </v-tab>
           <v-tab href="#tab-3">
             Portfolio/projets
+            <a href="https://ramconceptdeco.wixsite.com/favre-maeva"></a>
             <v-icon>mdi-account-box</v-icon>
           </v-tab>
           <v-tab href="#tab-4">
@@ -53,28 +51,28 @@
     <v-container>
       <v-tabs-items v-model="tab" height="100%">
         <v-tab-item :key="1" :value="'tab-' + 1">
-          <v-card color="#fdfd96" flat height="100%">
+          <v-card  flat height="100%">
             <v-card-text
               ><p class="elementPage"><Page1 /></p
             ></v-card-text>
           </v-card>
         </v-tab-item>
         <v-tab-item :key="2" :value="'tab-' + 2">
-          <v-card flat color="#fdfd96">
+          <v-card flat >
             <v-card-text
               ><p class="elementPage"><Page2 /></p
             ></v-card-text>
           </v-card>
         </v-tab-item>
         <v-tab-item :key="3" :value="'tab-' + 3">
-          <v-card flat color="#fdfd96">
+          <v-card flat >
             <v-card-text
               ><p class="elementPage"><Page3 /></p
             ></v-card-text>
           </v-card>
         </v-tab-item>
         <v-tab-item :key="4" :value="'tab-' + 4">
-          <v-card flat color="#fdfd96">
+          <v-card flat>
             <v-card-text
               ><p class="elementPage"><Page4 /></p
             ></v-card-text>
